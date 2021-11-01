@@ -1,0 +1,88 @@
+form {
+  text-align: left;
+}
+input {
+  border-radius: 25px;
+  border: none;
+  height: 50px;
+}
+input[type="submit"] {
+  background-color: #bbe4e9;
+  font-weight: bold;
+}
+
+input[type="button"] {
+  background-color: #bbe4e9;
+  font-weight: bold;
+}
+
+div.container {
+  width: 700px;
+}
+a {
+  text-decoration: none;
+  color: #bbe4e9;
+}
+.unit,
+.divider {
+  position: relative;
+  top: -6px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.high-low,
+.real-feel,
+.humidity {
+  text-indent: 25px;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  bottom: -16px;
+}
+.weather-comment,
+.city {
+  text-indent: 40px;
+  font-size: x-large;
+}
+.weather-comment {
+  font-style: italic;
+}
+.temperature {
+  text-indent: 40px;
+  font-size: 35px;
+}
+.city {
+  font-weight: bold;
+}
+.previsions {
+  text-indent: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 20px;
+}
+#current-time {
+  font-size: 20px;
+  font-weight: bold;
+}
+#current-temperature {
+  font-weight: bold;
+}
+#city-search {
+  text-indent: 15px;
+}
+#input-city:hover {
+  background: white;
+  color: #769cda;
+}
+#input-city {
+  transition: all 150ms ease-in-out;
+}
+
+#current-location:hover {
+  background: white;
+  color: #769cda;
+}
+#current-location {
+  transition: all 150ms ease-in-out;
+}

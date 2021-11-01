@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card bg-dark text-white">
+        <img
+          src="images/sun-cezanne-lestaque.jpg"
+          class="card-img"
+          alt="background-image"
+        />
+        <div class="card-img-overlay">
+          <div style="clear: both">
+            <h5 class="card-title date" id="current-date" style="float: left">
+            </h5>
+            <h5 class="card-text greeting" style="float: right">
+              Good afternoon!
+            </h5>
+          </div>
+          <hr />
+          <p class="card-text current-time" id="current-time"></p>
+          <form>
+            <input type="text" id="city-search" placeholder=" Search for a city..." size=40 autocomplete="off" />
+            <input type="submit" id="input-city" value="Search" style="height:50px; width:100px"/>
+            <input type="button" id="current-location" value="Current" style="height:50px; width:100px">
+          </form> 
+          <div class="row">
+            <div class="col">
+          <p>
+            <div class="city" id="display-city"></div>
+            <div class="weather-comment" id="display-comment"></div>
+            <div class="temperature"><span id="current-temperature">14</span><span class="unit"><a href="#" id="celsius">°C </a></span><span class="divider">|</span><span class="unit"><a href="#" id="fahrenheit"> °F</a></span> ⛅</div>
+          </p>
+          </div>
+          <div class="col">
+          <p>
+            <div class="high-low" id="high-low">High / low: </div>
+            <div class="real-feel" id="real-feel">Real Feel: </div>
+            <div class="humidity" id="humidity">Humidity: </div>
+          </p>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="previsions">Sun</div>
+              <div class="previsions">🌞</div>
+               <div class="previsions">15°C</div>
+            </div>
+            <div class="col">
+              <div class="previsions">Mon</div>
+              <div class="previsions">⛅</div>
+               <div class="previsions">12°C</div>
+            </div>
+            <div class="col">
+              <div class="previsions">Tue</div>
+              <div class="previsions">⚡</div>
+               <div class="previsions">10°C</div>
+            </div>
+            <div class="col">
+               <div class="previsions">Wed</div>
+              <div class="previsions">☔</div>
+               <div class="previsions">10°C</div>
+            </div>
+            <div class="col">
+               <div class="previsions">Thu</div>
+              <div class="previsions">⛄</div>
+               <div class="previsions">5°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"> 
+    </script>
+  </body>
+</html>

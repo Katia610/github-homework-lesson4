@@ -10,18 +10,24 @@ input[type="submit"] {
   background-color: #bbe4e9;
   font-weight: bold;
 }
-
 input[type="button"] {
   background-color: #bbe4e9;
   font-weight: bold;
 }
-
 div.container {
   width: 700px;
 }
 a {
   text-decoration: none;
   color: #bbe4e9;
+}
+a.code-link {
+  text-decoration: none;
+  color: #ef5f9a;
+}
+footer {
+  text-align: center;
+  font-size: small;
 }
 .unit,
 .divider {
@@ -78,7 +84,6 @@ a {
 #input-city {
   transition: all 150ms ease-in-out;
 }
-
 #current-location:hover {
   background: white;
   color: #769cda;

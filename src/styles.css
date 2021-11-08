@@ -53,6 +53,7 @@ footer {
 }
 .weather-comment {
   font-style: italic;
+  text-transform: capitalize;
 }
 .temperature {
   text-indent: 40px;

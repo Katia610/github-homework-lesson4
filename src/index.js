@@ -7,7 +7,7 @@ function showCurrentWeatherConditions(response) {
   let currentCity = response.data.name;
   cityDisplay.innerHTML = currentCity;
 
-  let currentWeatherDescription = response.data.weather[0].main;
+  let currentWeatherDescription = response.data.weather[0].description;
   let weatherDescription = document.querySelector("#display-comment");
   weatherDescription.innerHTML = `${currentWeatherDescription}`;
 

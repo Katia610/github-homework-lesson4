@@ -1,4 +1,6 @@
 function showCurrentWeatherConditions(response) {
+  celsiusTemperature = Math.round(response.data.main.temp);
+
   let currentTemperature = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#current-temperature");
   temperature.innerHTML = `${currentTemperature}`;
@@ -62,14 +64,35 @@ function getCurrentPosition(event) {
 
 function displayTemperatureInCelsius(event) {
   event.preventDefault();
+  unitFahrenheit.classList.remove("active");
+  unitCelsius.classList.add("active");
   let temperature = document.querySelector("#current-temperature");
-  temperature.innerHTML = 14;
+  temperature.innerHTML = celsiusTemperature;
 }
 
 function displayTemperatureInFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temperature");
-  temperature.innerHTML = 57;
+  unitFahrenheit.classList.add("active");
+  unitCelsius.classList.remove("active");
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+
+function greetUser(hour) {
+  if (hour > 5 && hour < 12) {
+    greeting.innerHTML = "Good morning! 🌞";
+  } else {
+    if (hour >= 12 && hour < 18) {
+      greeting.innerHTML = "Good afternoon! ☕";
+    } else {
+      if ((hour >= 18) & (hour < 21)) {
+        greeting.innerHTML = "Good evening! 🥱";
+      } else {
+        greeting.innerHTML = "Good night! 😴";
+      }
+    }
+  }
 }
 
 let now = new Date();
@@ -118,6 +141,12 @@ if (minute < 10) {
 
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${hour}:${minute}`;
+
+let greeting = document.querySelector("#greeting-message");
+
+greetUser(hour);
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("form");
 form.addEventListener("submit", findCity);

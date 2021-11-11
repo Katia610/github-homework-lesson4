@@ -29,6 +29,9 @@ footer {
   text-align: center;
   font-size: small;
 }
+.card-img {
+  opacity: 0.8;
+}
 .unit,
 .divider {
   position: relative;

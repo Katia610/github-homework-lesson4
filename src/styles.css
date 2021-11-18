@@ -70,6 +70,18 @@ footer {
   font-weight: bold;
   font-size: 25px;
   padding-top: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+.active {
+  color: white;
+  cursor: default;
+}
+.active:hover {
+  color: white;
+}
+.previsions-temperature-min {
+  opacity: 0.7;
 }
 #current-time {
   font-size: 20px;
@@ -94,11 +106,4 @@ footer {
 }
 #current-location {
   transition: all 150ms ease-in-out;
-}
-.active {
-  color: white;
-  cursor: default;
-}
-.active:hover {
-  color: white;
 }

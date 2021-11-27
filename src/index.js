@@ -1,23 +1,36 @@
+function formatDay(date) {
+  let dateForecast = new Date(date * 1000);
+  let dayForecast = dateForecast.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[dayForecast];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Sun", "Fri", "Mon", "Tue", "Wed"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col">
-      <div class="previsions-day">${day}</div>
-      <div class="previsions-icon">🌞</div>
+      <div class="previsions-day">${formatDay(forecastDay.dt)}</div>
+      <div class="previsions-icon"><img src="http://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png" alt="" width="50"/></div>
       <div class="previsions-temperature">
-        <span class="previsions-temperature-max">10° </span>
-        <span class="previsions-temperature-min">7°</span>
+        <span class="previsions-temperature-max">${Math.round(
+          forecastDay.temp.max
+        )}° </span>
+        <span class="previsions-temperature-min">${Math.round(
+          forecastDay.temp.min
+        )}°</span>
       </div>
     </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -27,7 +40,7 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "8f96c22e12424a3fb4624c20be074503";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 

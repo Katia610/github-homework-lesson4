@@ -17,6 +17,9 @@ input[type="button"] {
 div.container {
   width: 700px;
 }
+img.card-img {
+  opacity: 0.7;
+}
 a {
   text-decoration: none;
   color: #bbe4e9;
@@ -29,9 +32,6 @@ footer {
   text-align: center;
   font-size: small;
 }
-.card-img {
-  opacity: 0.8;
-}
 .unit,
 .divider {
   position: relative;
@@ -42,16 +42,19 @@ footer {
 .high-low,
 .real-feel,
 .humidity {
-  text-indent: 25px;
-  font-size: large;
-  font-weight: bold;
+  text-indent: 30px;
+  font-size: 25px;
   font-style: italic;
   position: relative;
   bottom: -16px;
+  right: -20px;
 }
-.weather-comment,
+.weather-comment {
+  text-indent: 20px;
+  font-size: 25px;
+}
 .city {
-  text-indent: 40px;
+  text-indent: 20px;
   font-size: x-large;
 }
 .weather-comment {
@@ -59,7 +62,7 @@ footer {
   text-transform: capitalize;
 }
 .temperature {
-  text-indent: 40px;
+  text-indent: 20px;
   font-size: 35px;
 }
 .city {
@@ -68,7 +71,7 @@ footer {
 .previsions {
   text-indent: 30px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   padding-top: 20px;
   text-align: center;
   line-height: 45px;

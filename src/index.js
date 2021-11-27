@@ -110,23 +110,6 @@ function getCurrentPosition(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function displayTemperatureInCelsius(event) {
-  event.preventDefault();
-  unitFahrenheit.classList.remove("active");
-  unitCelsius.classList.add("active");
-  let temperature = document.querySelector("#current-temperature");
-  temperature.innerHTML = celsiusTemperature;
-}
-
-function displayTemperatureInFahrenheit(event) {
-  event.preventDefault();
-  unitFahrenheit.classList.add("active");
-  unitCelsius.classList.remove("active");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-
 function greetUser(hour) {
   if (hour > 5 && hour < 12) {
     greeting.innerHTML = "Good morning! 🌞";
@@ -201,11 +184,5 @@ form.addEventListener("submit", findCity);
 
 let button = document.querySelector("#current-location");
 button.addEventListener("click", getCurrentPosition);
-
-let unitCelsius = document.querySelector("#celsius");
-unitCelsius.addEventListener("click", displayTemperatureInCelsius);
-
-let unitFahrenheit = document.querySelector("#fahrenheit");
-unitFahrenheit.addEventListener("click", displayTemperatureInFahrenheit);
 
 searchCity("London");

@@ -32,8 +32,7 @@ footer {
   text-align: center;
   font-size: small;
 }
-.unit,
-.divider {
+.unit {
   position: relative;
   top: -6px;
   font-size: 24px;
@@ -75,13 +74,6 @@ footer {
   padding-top: 20px;
   text-align: center;
   line-height: 45px;
-}
-.active {
-  color: white;
-  cursor: default;
-}
-.active:hover {
-  color: white;
 }
 .previsions-temperature-min {
   opacity: 0.7;

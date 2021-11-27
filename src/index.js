@@ -1,3 +1,28 @@
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Fri", "Mon", "Tue", "Wed"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col">
+      <div class="previsions-day">${day}</div>
+      <div class="previsions-icon">🌞</div>
+      <div class="previsions-temperature">
+        <span class="previsions-temperature-max">10° </span>
+        <span class="previsions-temperature-min">7°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showCurrentWeatherConditions(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
 
@@ -161,3 +186,5 @@ let unitFahrenheit = document.querySelector("#fahrenheit");
 unitFahrenheit.addEventListener("click", displayTemperatureInFahrenheit);
 
 searchCity("London");
+
+displayForecast();

@@ -42,7 +42,8 @@ footer {
 .real-feel,
 .humidity {
   text-indent: 30px;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: bolder;
   font-style: italic;
   position: relative;
   bottom: -16px;
@@ -51,14 +52,12 @@ footer {
 .weather-comment {
   text-indent: 20px;
   font-size: 25px;
+  font-style: italic;
+  text-transform: capitalize;
 }
 .city {
   text-indent: 20px;
   font-size: x-large;
-}
-.weather-comment {
-  font-style: italic;
-  text-transform: capitalize;
 }
 .temperature {
   text-indent: 20px;
@@ -68,7 +67,6 @@ footer {
   font-weight: bold;
 }
 .previsions {
-  text-indent: 30px;
   font-weight: bold;
   font-size: 23px;
   padding-top: 20px;
